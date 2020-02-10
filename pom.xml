@@ -15,11 +15,22 @@
     </modules>
     <properties>
         <version.duboo>2.6.7</version.duboo>
+        <version.dubbo.registry.nacos>2.6.7</version.dubbo.registry.nacos>
+        <version.netty>4.1.45.Final</version.netty>
         <version.alibaba.spring.context.support>1.0.2</version.alibaba.spring.context.support>
+        <spring-cloud-alibaba.version>2.1.1.RELEASE</spring-cloud-alibaba.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- spring-cloud-alibaba 总依赖 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo -->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -33,7 +44,18 @@
                 <artifactId>spring-context-support</artifactId>
                 <version>${version.alibaba.spring.context.support}</version>
             </dependency>
-
+            <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${version.netty}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo-registry-nacos -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>${version.dubbo.registry.nacos}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
