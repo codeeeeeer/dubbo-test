@@ -1,5 +1,10 @@
 package com.lewjay.service;
 
+import com.lewjay.ParamInfo;
+
+import java.util.Map;
+import java.util.Set;
+
 /**
  * 〈〉
  *
@@ -8,4 +13,8 @@ package com.lewjay.service;
  */
 public interface IGreetService {
     String greet(String name);
+
+    Set<String> greet(Map<String, String> names);
+
+    String desc(ParamInfo paramBean);
 }

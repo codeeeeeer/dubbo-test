@@ -3,6 +3,9 @@ package com.lewjay;
 import com.lewjay.service.IGreetService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 〈〉
  *
@@ -18,6 +21,11 @@ public class DubboTestConsumerApplication {
         IGreetService demoService = context.getBean("greetService", IGreetService.class);
         for (int i = 0; i < 10; i++) {
             System.out.println(demoService.greet("blingbling"));
+            Map<String, String> paramMap = new HashMap<>();
+            paramMap.put("target", "biubiubiu");
+            paramMap.put("source", "papapa");
+            paramMap.put("serial", i + "");
+            demoService.greet(paramMap);
         }
         context.close();
     }
