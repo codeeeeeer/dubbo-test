@@ -1,10 +1,14 @@
 package com.lewjay;
 
+import com.lewjay.model.ParamInfo;
 import com.lewjay.service.IGreetService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.math.BigDecimal;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 〈〉
@@ -25,8 +29,19 @@ public class DubboTestConsumerApplication {
             paramMap.put("target", "biubiubiu");
             paramMap.put("source", "papapa");
             paramMap.put("serial", i + "");
-            demoService.greet(paramMap);
+            Set<String> greet = demoService.greet(paramMap);
+            System.out.println(greet);
         }
+
+        ParamInfo paramInfo = new ParamInfo();
+        paramInfo.setAge(20);
+        paramInfo.setEnterance(new Date());
+        paramInfo.setId(12345678L);
+        paramInfo.setMoney(new BigDecimal("10000000"));
+        paramInfo.setName("Johnson");
+        paramInfo.setTestDouble(10086.0d);
+        String desc = demoService.desc(paramInfo);
+        System.out.println(desc);
         context.close();
     }
 }
