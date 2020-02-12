@@ -1,6 +1,6 @@
 package com.lewjay.service.impl;
 
-import com.lewjay.ParamInfo;
+import com.lewjay.model.ParamInfo;
 import com.lewjay.service.IGreetService;
 
 import java.util.Map;

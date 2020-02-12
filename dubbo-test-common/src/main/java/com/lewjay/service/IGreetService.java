@@ -1,6 +1,6 @@
 package com.lewjay.service;
 
-import com.lewjay.ParamInfo;
+import com.lewjay.model.ParamInfo;
 
 import java.util.Map;
 import java.util.Set;

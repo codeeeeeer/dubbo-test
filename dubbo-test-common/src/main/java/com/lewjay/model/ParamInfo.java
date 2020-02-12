@@ -1,4 +1,4 @@
-package com.lewjay;
+package com.lewjay.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
