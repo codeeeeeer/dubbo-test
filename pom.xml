@@ -16,7 +16,7 @@
     <properties>
         <version.maven.compile>2.3.2</version.maven.compile>
         <version.java>1.8</version.java>
-        <version.duboo>2.6.7</version.duboo>
+        <version.duboo>2.6.9</version.duboo>
         <version.dubbo.registry.nacos>2.6.7</version.dubbo.registry.nacos>
         <version.netty>4.1.45.Final</version.netty>
         <version.alibaba.spring.context.support>1.0.2</version.alibaba.spring.context.support>
